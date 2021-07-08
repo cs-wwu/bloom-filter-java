@@ -21,23 +21,25 @@ clean:
 run: classes
 	java -cp $(CLASSPATH) BloomFilter
 
-test-create: classes Test/TestRunner.class Test/BloomFilterTest.class
+test-build: classes Test/TestRunner.class Test/BloomFilterTest.class
+
+test-create: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testCreate
 
-test-add-one: classes Test/TestRunner.class Test/BloomFilterTest.class
+test-add-one: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testAddOne
 
-test-add-overlap: classes Test/TestRunner.class Test/BloomFilterTest.class
+test-add-overlap: ctest-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testAddOverlap
 
-test-not-present: classes Test/TestRunner.class Test/BloomFilterTest.class
+test-not-present: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testNotPresent
 
-test-present: classes Test/TestRunner.class Test/BloomFilterTest.class
+test-present: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testPresent
 
-test-maybe-present: classes Test/TestRunner.class Test/BloomFilterTest.class
+test-maybe-present: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testMaybePresent
 
-test: test-create test-add-one test-add-no-overlap test-add-overlap \
-	test-not-present test-present test-maybe-present
+test: test-build
+	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest
