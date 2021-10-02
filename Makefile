@@ -29,7 +29,7 @@ test-create: test-build
 test-add-one: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testAddOne
 
-test-add-overlap: ctest-build
+test-add-overlap: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testAddOverlap
 
 test-not-present: test-build
