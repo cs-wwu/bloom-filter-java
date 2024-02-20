@@ -21,7 +21,7 @@ This behavior is suitable for scenarios where elements are much more likely not 
 ## Data Structure
 
 
-![drawing](images/bloom.png)
+![Bloom](images/bloom.png)
 Figure 1. A Bloom filter with a bit array showing the word "foo" hashed to three locations.
 
 A Bloom filter is represented by an array of _m_ bits. All bits in the array are initially set to 0.
@@ -68,7 +68,7 @@ Now assume that there are three hashes, one to position 5, one to position 13 an
 
 
 
-![drawing](https://docs.google.com/drawings/d/12345/export/png)
+![Example](images/example.png)
 
 You have to use [bit masking operations in Java](https://www.google.com/search?q=bit+masks+in+Java&oq=bit+masks+in+Java) to accomplish setting and unsetting bits. 
 
