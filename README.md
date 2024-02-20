@@ -83,9 +83,10 @@ Hint:
 ## Testing
 
 There is a small test program in main in BloomFilter.java. You can compile and run it with:
-
-	`make run`
-
+```
+	make run
+```
 You can test your code with
-
-	`make test`
+```
+	make test
+```
