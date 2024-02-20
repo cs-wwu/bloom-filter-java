@@ -90,3 +90,6 @@ You can test your code with
 ```
 	make test
 ```
+
+## Submitting
+Submit your source .java files to this repo.
