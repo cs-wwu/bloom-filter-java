@@ -41,7 +41,7 @@ A Bloom filter can hold an arbitrarily large number of elements, but as you expe
 ![equation](images/equation.png)
 
 
-A Bloom filter with a 1% error rate and an optimal number of _k _hashes uses approximately [9.6 bits per element](https://en.wikipedia.org/wiki/Bloom_filter#:~:text=Linked%20structures%20incur%20an%20additional,the%20size%20of%20the%20elements.). This is pretty good, when you consider that a single Java reference is 64 bits.
+A Bloom filter with a 1% error rate and an optimal number of _k_ hashes uses approximately [9.6 bits per element](https://en.wikipedia.org/wiki/Bloom_filter#:~:text=Linked%20structures%20incur%20an%20additional,the%20size%20of%20the%20elements.). This is pretty good, when you consider that a single Java reference is 64 bits.
 
 
 ## Your Tasks
