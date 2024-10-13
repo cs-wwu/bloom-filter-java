@@ -71,6 +71,7 @@ Now assume that there are three hashes, one to position 5, one to position 13 an
 ![Example](images/example.png)
 
 You have to use [bit masking operations in Java](https://www.google.com/search?q=bit+masks+in+Java&oq=bit+masks+in+Java) to accomplish setting and unsetting bits. 
+Read more about it [here](https://docs.google.com/document/d/1aYIWOKBTqBm1mxsgWDu3pfKOrSk3wnJRNdFY5DUC_Hw/edit?tab=t.0).
 
 Hint: 
 
