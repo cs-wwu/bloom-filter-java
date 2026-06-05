@@ -29,7 +29,7 @@ test-create: test-build
 test-add-one: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testAddOne
 
-test-add-overlap: ctest-build
+test-add-overlap: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest#testAddOverlap
 
 test-not-present: test-build
@@ -43,3 +43,18 @@ test-maybe-present: test-build
 
 test: test-build
 	java -cp $(TESTCLASSPATH) TestRunner BloomFilterTest
+
+
+clean-docker:
+	-docker image rm seemongtan/build:latest
+
+autograde:
+	curl -L -H "Cache-Control: no-cache" \
+        -H "Pragma: no-cache" \
+        https://raw.githubusercontent.com/cs-wwu/Autograder/main/autograder.py \
+	    -o Test/autograder.py
+	python3 Test/autograder.py
+	rm Test/autograder.py result.json
+
+run-on-docker:
+	docker run -it --rm --mount type=bind,src=.,dst=/app --platform linux/amd64 seemongtan/build:latest

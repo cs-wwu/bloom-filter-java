@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Test 1. Create",
+    "setup": "",
+    "command": "make test-create",
+    "points": 1
+  },
+  {
+    "name": "Test 2. Add one",
+    "setup": "",
+    "command": "make test-add-one",
+    "points": 1
+  },
+  {
+    "name": "Test 3. Add overlap",
+    "setup": "",
+    "command": "make test-add-overlap",
+    "points": 2
+  },
+  {
+    "name": "Test 4. Not present",
+    "setup": "",
+    "command": "make test-not-present",
+    "points": 2
+  },
+  {
+    "name": "Test 5. Present",
+    "setup": "",
+    "command": "make test-present",
+    "points": 2
+  },
+  {
+    "name": "Test 6. Maybe present",
+    "setup": "",
+    "command": "make test-maybe-present",
+    "points": 2
+  }
+]
